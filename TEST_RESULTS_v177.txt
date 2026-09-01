@@ -1,0 +1,26 @@
+ANTIZIONISM DETECTOR — WORKING COPY v177
+Date: 2026-08-28
+
+PASSED
+- JavaScript syntax: all repository .js files passed node --check.
+- Rule inventory: 355 rules loaded; all 355 regex patterns compiled successfully.
+- Attribution gate: main trigger output now uses only sentence-level Direct claim matches.
+- Quoted, reported, rejected, descriptive, question-only, and attribution-unclear mapped wording is retained as observed language but is not counted as the author's antizionist language.
+- Extended criteria/stance regression set passed, including direct vs reported/rejected uses of Free Palestine, From the river to the sea, BDS, End the occupation, blockade, open-air-prison language, October 7 denial/minimization/celebration, Hamas-as-resistance endorsement, Jewish peoplehood denial, supremacy claims, bloodlust/character demonization, poisoning libel, Holocaust inversion, hidden-control language, dual loyalty, and Jewish/Zionism loyalty tests.
+- A question such as “Should we support BDS?” does not count as endorsement.
+- A standalone author use of “Free Palestine” is A-low; affirmative embedded use maps above standalone A-low; quoted/reported/rejected uses do not count.
+- Ordinary policy criticism control remained unflagged in the regression set.
+- Ordinary named lobbying/influence criticism control remained unflagged while hidden-control wording was detected.
+- Static trial control: three analyses decrement 3 → 2 → 1 → 0; fourth attempt is blocked with PURCHASE_REQUIRED.
+- Literal private access code is absent from repository text files.
+- Internal HTML script/style/link references resolve to included files.
+
+PRESERVATION
+- The Google Drive MASTER package is not modified by this working build.
+- Access/trial storage keys remain on the v176 key names intentionally, preserving browser continuity if this working build later replaces v176.
+
+BROWSER LIMITATION
+- No new browser-render verification is claimed for v177 in this environment. The changes were validated at code, rule, attribution, reference, and package level.
+
+STATIC GITHUB LIMITATION
+- GitHub Pages exposes browser-delivered detector logic and cannot provide tamper-proof trial/payment enforcement.

@@ -1,0 +1,31 @@
+ANTIZIONISM DETECTOR — WORKING COPY v178
+Date: 2026-09-01
+
+PASSED — STANCE / ENDORSEMENT REGRESSION
+Direct author use counted:
+- Israel is committing genocide in Gaza.
+- Stop the genocide in Gaza.
+- The genocide accusation against Israel is correct.
+- The accusation that Israel is committing genocide is true.
+- Critics say Israel is committing genocide, and I agree.
+- Free Palestine.
+- Gaza is an open-air prison.
+- End the occupation.
+
+Non-endorsed use did not count as antizionist:
+- The protesters chanted “Free Palestine.”
+- The article claims Israel is committing genocide in Gaza.
+- I reject the claim that Israel is committing genocide in Gaza.
+- The genocide accusation against Israel is false.
+- Scholars debate whether Gaza is an open-air prison.
+- He said “end the occupation,” but I disagree.
+- The genocide in Rwanda was horrific.
+- I support research into genocide accusations against Israel. (Context-only, not an antizionist result.)
+- I support publication of the article discussing genocide accusations against Israel. (Context-only, not an antizionist result.)
+
+STATIC QA
+- All repository JavaScript files pass node --check.
+- All detector regex patterns compile.
+- Internal HTML script/style/link references resolve to included local files.
+- GitHub Pages static architecture preserved.
+- MASTER not modified.

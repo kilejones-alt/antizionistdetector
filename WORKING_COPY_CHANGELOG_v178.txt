@@ -1,0 +1,29 @@
+ANTIZIONISM DETECTOR — WORKING COPY v178
+Date: 2026-09-01
+
+SOURCE BASE
+- Preserved v177 GitHub Pages working detector as the immediate baseline.
+- Google Drive MASTER remains untouched.
+- August 10–12, 2026 Antizionist Language Coding Guide remains the substantive criteria source.
+- September 1 clarification resolves the stance question without changing the language-not-people rule.
+
+CONTROLLING ATTRIBUTION RULE
+- A mapped expression counts when the author uses it indicatively in their own voice: affirming, endorsing, agreeing with, accepting, approving, condoning, backing, or otherwise presenting it as correct/true.
+- Quoted, reported, rejected, criticized, mocked, descriptive, academic, historical, or attribution-unclear wording does not count as the author’s antizionist language.
+- Genuinely unresolved stance remains human-review/unclear rather than forced into endorsement.
+
+GENOCIDE CLARIFICATION
+- An affirmative author accusation that Israel/Zionism is committing genocide counts as antizionist language.
+- Explicit affirmation of the accusation itself also counts, including formulations such as “the genocide accusation against Israel is correct.”
+- Reporting that others make the accusation, quoting it, rejecting it, or discussing it academically/historically does not count.
+- Genocide language unrelated to Israel/Zionism is not mapped by this rule.
+
+OTHER APPROVED STANCE APPLICATIONS PRESERVED
+- Free Palestine: affirmative author use counts; standalone author use remains A-low.
+- Open-air prison: affirmative author use in the mapped Israel/Gaza context counts.
+- End the occupation: affirmative author use counts.
+- Existing thresholds, result tiers, categories, and language-not-people behavior are otherwise preserved.
+
+CODE FIX
+- Fixed a descriptive-noun edge case where explicit endorsement of a mapped accusation (for example, saying the accusation is correct) could remain Context-only.
+- Rejection continues to override descriptive/affirmation parsing, preventing rejected accusations from being treated as adopted.

@@ -1,0 +1,16 @@
+ANTIZIONISM DETECTOR — WORKING COPY v179
+Date: 2026-09-01
+
+APP / HOSTING CHANGES ONLY
+- Removed obsolete Netlify scan-url and crawl-site dependencies.
+- Added client-side public web reader integration for GitHub Pages/PWA.
+- Website crawl follows discovered same-site links up to the existing 5/10/20 page limits.
+- Public URL/site scanner blocks localhost and private-network targets.
+- Local PDF/DOCX/TXT/JPG/PNG/WebP processing remains local.
+- Removed the duplicate escapeRegExp() declaration from app.js.
+- Updated PWA cache/version references to v179.
+- Updated privacy/install/limits copy to match the actual GitHub Pages architecture.
+
+DETECTOR LOGIC
+- v178 endorsement/stance/genocide changes are preserved.
+- No detector thresholds, categories, labels, or classification criteria were changed in v179.

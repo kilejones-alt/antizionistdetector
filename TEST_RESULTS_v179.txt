@@ -1,0 +1,32 @@
+ANTIZIONISM DETECTOR — WORKING COPY v179
+Date: 2026-09-01
+
+PASSED — DETECTOR PRESERVATION
+- rules.js unchanged byte-for-byte from v178.
+- discourse-observations.js unchanged byte-for-byte from v178.
+- access.js, detector-app.js, history.js, report-export.js, and document-scan.js unchanged byte-for-byte from v178.
+- app.js changes limited to removing the duplicate escapeRegExp() declaration and updating the service-worker cache-busting version.
+- v178 author-endorsement / attribution / genocide behavior preserved.
+- No detector thresholds, categories, labels, or classification criteria changed in v179.
+
+PASSED — GITHUB / PWA WEB SCANNING
+- Obsolete Netlify scan-url and crawl-site references removed.
+- Added configurable public web reader integration (config.js webReaderBase; default Jina Reader).
+- Single public HTTP/HTTPS page loading retained.
+- Same-site bounded crawl retained at 5 / 10 / 20 pages using links discovered in retrieved pages.
+- Private/local-network URL targets blocked by the client.
+- Local document processing remains local in the browser.
+- Web-reader unit harness passed URL normalization, private-address blocking, page response handling, and same-site link extraction.
+
+PASSED — STATIC QA
+- All root JavaScript files pass node --check.
+- No duplicate top-level function declarations remain in app.js.
+- Code 2057 is not present in repository source/text files.
+- All local HTML script/style/link references resolve to included files.
+- All service-worker app-shell references resolve.
+- VERSION.json and manifest.webmanifest parse as valid JSON.
+- No Netlify endpoint or apiBase references remain.
+
+LIMITATIONS OF THIS QA PASS
+- The external public web-reader service could not be live-called from the container runtime; implementation was checked against the current Jina Reader API documentation and with a mocked response harness.
+- Chromium is installed in this environment but its headless render process timed out because of the container browser runtime/DBus environment, so this pass does not claim a new screenshot-render verification.

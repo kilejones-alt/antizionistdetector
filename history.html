@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#020202">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest?v=179">
+  <link rel="apple-touch-icon" href="icon-192.png?v=179">
+  <link rel="stylesheet" href="style.css?v=179">
+  <title>Local History | The Antizionism Detector</title>
+</head>
+<body class="motion-seed v87-body">
+  <main class="shell info-shell history-shell">
+    <section class="info-page-card">
+      <p class="section-kicker">Private on-device records</p>
+      <h1>History &amp; statistics</h1>
+      <p>Only analysis metadata, matched evidence snippets, categories, source labels, wider-language observations, and corrections are saved. Full pasted text is not stored.</p>
+
+      <div class="history-stat-grid">
+        <div><strong id="historyTotal">0</strong><span>Analyses</span></div>
+        <div><strong id="historyFlagged">0</strong><span>Mapped results</span></div>
+        <div><strong id="historyCorrections">0</strong><span>Corrections</span></div>
+      </div>
+
+      <h2>Wider language observations</h2>
+      <p>These are counts of observable language features across saved analyses. They support review of fixation, grandiosity, double standards, ritual use, and symbolism; they are not psychological diagnoses.</p>
+      <div class="history-stat-grid wider-pattern-grid">
+        <div><strong id="historyIsraelFocus">0</strong><span>Items mentioning Israel/Zionism</span></div>
+        <div><strong id="historyGrandiosity">0</strong><span>Grandiosity cues</span></div>
+        <div><strong id="historyDoubleStandard">0</strong><span>Comparative / double-standard cues</span></div>
+        <div><strong id="historyRitual">0</strong><span>Rally / ritual / symbol cues</span></div>
+      </div>
+      <p id="historyPatternNote" class="history-pattern-note">No saved wider-pattern data.</p>
+
+      <h2>Top categories</h2>
+      <ul id="topCategories" class="history-category-list"></ul>
+
+      <div class="history-actions">
+        <button id="exportHistoryCsv" class="secondary" type="button">Export CSV</button>
+        <button id="exportHistoryJson" class="secondary" type="button">Export JSON</button>
+        <button id="clearHistory" class="secondary danger-button" type="button">Clear local data</button>
+      </div>
+
+      <div class="history-table-wrap">
+        <table class="history-table">
+          <thead><tr><th>Date</th><th>Source</th><th>Result</th><th>Severity</th><th>Matched language</th><th>Wider cues</th></tr></thead>
+          <tbody id="historyRows"></tbody>
+        </table>
+      </div>
+      <p><a class="footer-pill" href="index.html">Back to detector</a></p>
+    </section>
+  </main>
+  <script src="history.js?v=179"></script>
+  <script src="history-page.js?v=179"></script>
+  <script src="pwa.js?v=179"></script>
+</body>
+</html>

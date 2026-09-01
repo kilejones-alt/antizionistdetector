@@ -1,0 +1,12 @@
+UPLOAD TO GITHUB
+
+1. Create/open the detector GitHub repository.
+2. Extract this ZIP.
+3. Upload EVERYTHING INSIDE the extracted folder to the repository root.
+4. GitHub Settings > Pages > Deploy from branch > main > /(root).
+5. The app opens at index.html. detector-app.html redirects to index.html.
+6. In Stripe, set the success URL to your final GitHub Pages URL + /thanks.html?session_id={CHECKOUT_SESSION_ID}.
+
+Do not upload the ZIP as the only repository file.
+
+7. No Netlify deployment is required. Public URL/site scanning uses the webReaderBase configured in config.js.

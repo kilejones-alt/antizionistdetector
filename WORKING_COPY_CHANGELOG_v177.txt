@@ -1,0 +1,32 @@
+ANTIZIONISM DETECTOR — WORKING COPY v177
+Date: 2026-08-28
+
+SOURCE BASE
+- Preserved v176 GitHub Pages detector.
+- August 10–12, 2026 Antizionist Language Coding Guide used for criteria updates.
+- Existing v176 rule inventory retained unless a newer coding-guide rule required an update.
+
+CONTROLLING ATTRIBUTION RULE
+- A mapped expression counts only when the author uses it affirmatively or adopts it.
+- Agreement/acceptance cues include direct statement, agreement, endorsement, support, acceptance, condoning, approval, affirmation, backing, or an explicit follow-up adoption.
+- Quoted, reported, rejected, descriptive, academic/historical, question-only, or attribution-unclear wording does not count as the author's antizionist language.
+- Such wording may remain visible as observed language for human review.
+
+CRITERIA UPDATES
+- Free Palestine: affirmative author use now maps; a bare standalone author slogan is A-low.
+- BDS and academic/cultural boycott: affirmative author use now maps.
+- End the occupation, occupation-is-a-crime, occupied-Palestine, blockade, and siege formulations: affirmative author use now maps under the current guide.
+- Added October 7 denial, staging, minimization/trivialization, and celebration/justification patterns.
+- Added direct Hamas-as-resistance/liberation endorsement.
+- Added Jewish peoplehood/ancestry denial patterns.
+- Added inherent bloodlust/savage-character demonization patterns.
+- Added poisoning-water/food libel patterns.
+- Expanded Holocaust-inversion coverage.
+- Added direct hidden-power/donor-class control and dual-loyalty patterns while preserving ordinary named lobbying/influence criticism as a control case.
+- Added Jewish participation/Zionism loyalty-test language.
+- Added observable object-widening and grandiose uniquely-evil language patterns.
+- Added Jewish-supremacy-as-inherent-state-principle wording.
+
+NOT INFERRED
+- The detector evaluates language, not people.
+- Hyperfixation, selectivity, motive, psychology, or a person-level identity is not inferred from one text unless an explicit mapped linguistic construction is present.

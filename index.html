@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#020202">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Antizionism Detector">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Rule-based text analysis for antizionist language and related Jew-hatred terms.">
+  <meta property="og:title" content="The Antizionism Detector">
+  <meta property="og:description" content="Paste text. Find out.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="icon-512.png">
+  <link rel="manifest" href="manifest.webmanifest?v=179">
+  <link rel="apple-touch-icon" href="icon-192.png?v=179">
+  <link rel="stylesheet" href="style.css?v=179">
+  <title>The Antizionism Detector | Detector App</title>
+</head>
+<body class="motion-seed v87-body v111-home">
+  <main class="shell v87-shell">
+    <section class="v87-hero award-hero" aria-label="Detector introduction">
+      <div class="v87-hero-copy">
+        <h1 class="hero-title v87-title" aria-label="The Antizionism Detector"><span class="roll-title-word"><span class="roll-title-letter roll-title-letter-normal" style="--i:0" aria-hidden="true">T</span><span class="roll-title-letter roll-title-letter-normal" style="--i:1" aria-hidden="true">h</span><span class="roll-title-letter roll-title-letter-normal" style="--i:2" aria-hidden="true">e</span></span><span class="roll-title-word"><span class="roll-title-letter roll-title-letter-normal" style="--i:3" aria-hidden="true">A</span><span class="roll-title-letter roll-title-letter-normal" style="--i:4" aria-hidden="true">n</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:5" aria-hidden="true">t</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:6" aria-hidden="true">i</span><span class="roll-title-letter roll-title-letter-normal" style="--i:7" aria-hidden="true">z</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:8" aria-hidden="true">i</span><span class="roll-title-letter roll-title-letter-normal" style="--i:9" aria-hidden="true">o</span><span class="roll-title-letter roll-title-letter-normal" style="--i:10" aria-hidden="true">n</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:11" aria-hidden="true">i</span><span class="roll-title-letter roll-title-letter-normal" style="--i:12" aria-hidden="true">s</span><span class="roll-title-letter roll-title-letter-wide" style="--i:13" aria-hidden="true">m</span></span><span class="roll-title-word"><span class="roll-title-letter roll-title-letter-normal" style="--i:14" aria-hidden="true">D</span><span class="roll-title-letter roll-title-letter-normal" style="--i:15" aria-hidden="true">e</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:16" aria-hidden="true">t</span><span class="roll-title-letter roll-title-letter-normal" style="--i:17" aria-hidden="true">e</span><span class="roll-title-letter roll-title-letter-normal" style="--i:18" aria-hidden="true">c</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:19" aria-hidden="true">t</span><span class="roll-title-letter roll-title-letter-normal" style="--i:20" aria-hidden="true">o</span><span class="roll-title-letter roll-title-letter-narrow" style="--i:21" aria-hidden="true">r</span></span></h1>
+        <p class="tagline v87-tagline">Paste text. Find out.</p>
+      </div>
+    </section>
+
+    <section id="analysisWorkbench" class="card analysis-card v87-workbench motion-workbench" aria-label="Text analysis tool">
+      <div class="v87-tool-grid">
+        <div class="analysis-pane input-pane v87-input-pane">
+          <div id="documentUploadPanel" class="document-upload-panel" aria-label="Document scanner">
+            <div class="document-upload-copy">
+              <span class="document-upload-title">Scan a document</span>
+              <span class="document-upload-formats">PDF, DOCX, TXT, JPG, PNG, or WebP · up to 25 MB</span>
+            </div>
+            <input id="documentFileInput" class="document-file-input" type="file" accept=".pdf,.docx,.txt,.jpg,.jpeg,.png,.webp,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,image/jpeg,image/png,image/webp">
+            <input id="cameraFileInput" class="document-file-input" type="file" accept="image/*" capture="environment">
+            <div class="document-upload-actions">
+              <button id="chooseDocumentBtn" class="secondary document-choose-button" type="button">Choose document</button>
+              <button id="takePhotoBtn" class="secondary document-choose-button" type="button">Take photo</button>
+              <span id="documentFileName" class="document-file-name">No file selected</span>
+            </div>
+            <p id="documentStatus" class="document-status" aria-live="polite">The file and extracted text stay on this device and are analyzed locally in the browser. OCR requires internet access to load its recognition engine.</p>
+          </div>
+          <div id="urlScanPanel" class="url-scan-panel" aria-label="Web page scanner">
+            <div class="url-scan-copy">
+              <span class="url-scan-title">Scan a web page</span>
+              <span class="url-scan-formats">One public URL at a time · public web reader</span>
+            </div>
+            <form id="urlScanForm" class="url-scan-form">
+              <label class="sr-only" for="urlInput">Web-page URL</label>
+              <input id="urlInput" class="url-scan-input" type="text" inputmode="url" autocomplete="url" placeholder="https://example.com/article">
+              <button id="loadUrlBtn" class="secondary url-load-button" type="submit">Load page</button>
+            </form>
+            <p id="urlStatus" class="url-status" aria-live="polite">Public-page URLs are retrieved through the app’s web reader. Local documents remain on this device.</p>
+          </div>
+          <div id="siteCrawlPanel" class="site-crawl-panel" aria-label="Website crawler">
+            <div class="site-crawl-copy">
+              <span class="site-crawl-title">Scan a website</span>
+              <span class="site-crawl-formats">Crawl up to 20 same-site pages</span>
+            </div>
+            <form id="siteCrawlForm" class="site-crawl-form">
+              <label class="sr-only" for="siteCrawlInput">Website URL</label>
+              <input id="siteCrawlInput" class="site-crawl-input" type="text" inputmode="url" autocomplete="url" placeholder="https://example.com">
+              <label class="sr-only" for="siteCrawlLimit">Maximum pages</label>
+              <select id="siteCrawlLimit" class="site-crawl-limit" aria-label="Maximum pages to crawl">
+                <option value="5">5 pages</option>
+                <option value="10" selected>10 pages</option>
+                <option value="20">20 pages</option>
+              </select>
+              <button id="crawlSiteBtn" class="secondary site-crawl-button" type="submit">Crawl site</button>
+            </form>
+            <p id="siteCrawlStatus" class="site-crawl-status" aria-live="polite">The app follows same-site links found on public pages through its web reader. Some sites may block automated retrieval.</p>
+            <div id="siteCrawlResults" class="site-crawl-results" hidden>
+              <span class="site-crawl-results-title">Pages included</span>
+              <ol id="siteCrawlPages" class="site-crawl-pages"></ol>
+            </div>
+          </div>
+          <div class="document-or-divider"><span>or paste text</span></div>
+          <label for="textInput">Paste text</label>
+          <textarea id="textInput" rows="6" placeholder="Paste a post, paragraph, quote, article excerpt, or slogan..."></textarea>
+          <div class="actions v87-actions">
+            <button id="analyzeBtn" class="primary" type="button">Analyze</button>
+            <button id="clearBtn" class="secondary" type="button">Clear</button>
+            <button id="installBtn" class="secondary hidden" type="button">Install app</button>
+            <a class="secondary action-link" href="install.html">How installation works</a>
+          </div>
+          <section id="purchaseAccessPanel" class="purchase-access-panel" aria-label="App purchase and access">
+            <div class="purchase-access-copy">
+              <strong>Downloadable unlimited detector app</strong>
+              <span>Purchase at any time, or continue with the three included analyses on this browser.</span>
+            </div>
+            <div class="purchase-access-actions">
+              <button id="purchaseAppBtn" class="purchase-app-button" type="button">Purchase app now</button>
+              <button id="accessCodeLink" class="access-code-link" type="button">Enter access code</button>
+            </div>
+            <p id="accessMessage" class="access-message" aria-live="polite"></p>
+          </section>
+          <p id="searchMeter" class="search-meter" aria-live="polite">Checking free analyses…</p>
+          <div id="detectorImageBox" class="input-empty-box detector-image-box" aria-live="polite">
+            <img id="detectorImage" class="detector-image hidden" alt="" loading="lazy" referrerpolicy="no-referrer">
+          </div>
+        </div>
+
+        <section id="resultCard" class="result-card neutral awaiting" aria-live="polite">
+          <div class="result-topline v87-result-topline">
+            <span class="label">Result</span>
+            <span id="severityBadge" class="badge">Ready</span>
+          </div>
+          <span id="resultText" class="sr-only" aria-live="polite"></span>
+          <div class="quick-summary v87-result-summary">
+            <div class="summary-box matched-summary">
+              <h3>Found in text</h3>
+              <div id="topSummary" class="top-match-summary">—</div>
+            </div>
+            <div class="summary-box meaning-summary">
+              <h3>What this means</h3>
+              <p id="meaningBox">—</p>
+            </div>
+            <div class="summary-box why-summary">
+              <h3>Why it matters</h3>
+              <p id="resultReason">—</p>
+            </div>
+            <div class="summary-box who-summary">
+              <h3>Who said it</h3>
+              <p id="whoSaidBox">—</p>
+            </div>
+            <div class="summary-box source-context-summary">
+              <h3>Source context</h3>
+              <p id="sourceContextBox">—</p>
+            </div>
+            <div class="summary-box discourse-pattern-summary">
+              <h3>Wider language pattern</h3>
+              <p id="discoursePatternBox">—</p>
+            </div>
+            <div class="summary-box resources-summary">
+              <h3>Resources</h3>
+              <div id="resourcesBox" class="resource-list"></div>
+            </div>
+          </div>
+          <details id="evidencePanel" class="evidence-panel source-role-box simple-evidence v87-detail hidden">
+            <summary>More detail</summary>
+            <dl class="grid evidence-grid">
+              <div><dt>Type of language</dt><dd id="categories">—</dd></div>
+              <div id="attributionRow" class="hidden"><dt>Who said it</dt><dd id="stanceDetected">—</dd></div>
+              <div><dt>More detail</dt><dd id="evidenceWhy">—</dd></div>
+              <div><dt>Bottom line</dt><dd id="ordinary">—</dd></div>
+            </dl>
+          </details>
+          <section id="reportExportPanel" class="report-export-panel hidden" aria-label="Export analysis report">
+            <div class="report-export-heading">
+              <h3>Export report</h3>
+              <p>Reports are generated in this browser after analysis.</p>
+            </div>
+            <div class="report-export-actions">
+              <button id="printReportBtn" class="secondary report-export-button" type="button">Print / save PDF</button>
+              <button id="downloadHtmlReportBtn" class="secondary report-export-button" type="button">Download HTML</button>
+              <button id="downloadTextReportBtn" class="secondary report-export-button" type="button">Download text</button>
+              <button id="downloadJsonReportBtn" class="secondary report-export-button" type="button">Download data</button>
+            </div>
+          </section>
+          <section id="correctionPanel" class="result-correction-panel" aria-label="Correct this language result">
+            <div><h3>Correct this result</h3><p>Corrections stay on this device and do not store the full pasted text.</p></div>
+            <label for="correctLabel">Correct language label</label>
+            <select id="correctLabel">
+              <option value="">Choose a label</option>
+              <option>No antizionist language detected</option>
+              <option>Context-dependent antizionist language</option>
+              <option>Antizionist language detected</option>
+              <option>Strong antizionist language detected</option>
+              <option>Attribution was incorrect</option>
+              <option>Other correction</option>
+            </select>
+            <label for="whyWrong">Reason or note</label>
+            <textarea id="whyWrong" rows="3" placeholder="Explain what the rule missed or misread."></textarea>
+            <div class="actions"><button id="saveCorrection" class="secondary" type="button">Save correction locally</button><span id="saveStatus" class="save-status" aria-live="polite"></span></div>
+          </section>
+        </section>
+      </div>
+    </section>
+
+    <section class="card local-history-card reveal-item" aria-label="Local history and statistics">
+      <div><div class="section-kicker">Private device data</div><h2>History &amp; statistics</h2><p id="historySummary">0 analyses · 0 with mapped language · 0 corrections</p></div>
+      <a class="primary action-link" href="history.html">Open local history</a>
+    </section>
+
+    <section class="card v87-samples v120-samples reveal-item" aria-label="Example texts">
+      <div class="v87-section-head v120-section-head">
+        <div>
+          <div class="section-kicker">Samples</div>
+          <h2>Small tests</h2>
+        </div>
+        <p>Direct, context, and policy examples.</p>
+      </div>
+      <div class="v120-sample-grid" aria-label="Small test examples">
+        <button type="button" class="example-btn" data-example="Free Palestine from the river to the sea">River to sea</button>
+        <button type="button" class="example-btn" data-example="Israel is a settler-colonial apartheid state">Settler-colonial</button>
+        <button type="button" class="example-btn" data-example="Zionism is racism">Zionism is racism</button>
+        <button type="button" class="example-btn" data-example="No Zionists allowed">No Zionists</button>
+        <button type="button" class="example-btn" data-example="The article reported that protesters chanted from the river to the sea">Reported chant</button>
+        <button type="button" class="example-btn" data-example="The post rejected the claim that Zionists control everything">Rejected claim</button>
+        <button type="button" class="example-btn" data-example="I oppose Netanyahu and settlement expansion">Policy criticism</button>
+        <button type="button" class="example-btn" data-example="I support a two-state solution">Two-state</button>
+        <button type="button" class="example-btn term-chip" data-example="Apartheid">Apartheid</button>
+        <button type="button" class="example-btn term-chip" data-example="Genocide">Genocide</button>
+        <button type="button" class="example-btn term-chip" data-example="Ethnostate">Ethnostate</button>
+        <button type="button" class="example-btn term-chip" data-example="Settler-colonialism">Settler-colonialism</button>
+        <button type="button" class="example-btn term-chip" data-example="Hasbara">Hasbara</button>
+        <button type="button" class="example-btn term-chip" data-example="BDS">BDS</button>
+        <button type="button" class="example-btn term-chip" data-example="Open-air prison">Open-air prison</button>
+        <button type="button" class="example-btn term-chip" data-example="Occupier">Occupier</button>
+        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
+        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
+        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
+        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
+      </div>
+    </section>
+
+    <details class="card reference-card v87-guide reveal-item" aria-label="How to read results">
+      <summary>How to read results</summary>
+      <div class="guide-card-grid">
+        <div class="guide-card"><h3>No antizionism detected</h3><p>The app did not find antizionist language.</p></div>
+        <div class="guide-card"><h3>Context-dependent antizionist language</h3><p>The app found mapped vocabulary whose attribution, target, or function requires surrounding context.</p></div>
+        <div class="guide-card"><h3>Antizionist language found</h3><p>The text uses antizionist language directly.</p></div>
+        <div class="guide-card"><h3>Strong antizionist language found</h3><p>The text uses stronger language, such as libel, Zionism/Nazi inversion, replacement language, exclusion, violence-shielding, or Jewish-institution targeting.</p></div>
+      </div>
+      <div class="detector-scope">
+        <h3>What this detector checks</h3>
+        <p><strong>Antizionist language:</strong> words, slogans, libels, and chants tied to Israel, Zionism, Zionists, Israelis, the IDF, Jewish statehood, Jewish indigeneity, Jewish institutions, or recognized antizionist vocabulary.</p>
+      </div>
+    </details>
+
+    <dialog id="accessCodeDialog" class="access-code-dialog">
+      <form id="accessCodeForm" method="dialog" class="access-code-form">
+        <div class="access-code-head">
+          <div>
+            <p class="section-kicker">Private access</p>
+            <h2>Enter access code</h2>
+          </div>
+          <button id="accessCodeClose" class="dialog-close" type="button" aria-label="Close">×</button>
+        </div>
+        <label for="accessCodeInput">Four-digit code</label>
+        <input id="accessCodeInput" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="one-time-code" aria-describedby="accessCodeStatus">
+        <p id="accessCodeStatus" class="access-code-status" aria-live="polite"></p>
+        <button id="redeemAccessCodeBtn" class="primary" type="submit">Unlock unlimited access</button>
+      </form>
+    </dialog>
+
+    <p id="installHint" class="hint install-note"></p>
+
+    <footer class="site-footer v87-footer">
+      <span>© 2026 Kile Jones.</span>
+      <a class="footer-pill" href="limits.html">Limits &amp; use</a>
+      <a class="footer-pill" href="methodology.html">Methodology</a>
+      <a class="footer-pill" href="antizionism.html">What is Antizionism?</a>
+      <a class="footer-pill" href="resources.html">Resources</a>
+      <a class="footer-pill" href="legal.html">Legal</a>
+      <a class="footer-pill" href="privacy.html">Privacy</a>
+      <a class="footer-pill" href="support.html">Support</a>
+      <a class="footer-pill" href="install.html">Install</a>
+      <a class="footer-pill" href="history.html">History</a>
+      <a class="footer-pill" href="index.html">App</a>
+      <a id="detectorImageCredit" class="footer-pill image-credit-footer-pill hidden" href="image-credits.html" target="_blank" rel="noopener noreferrer">Image credit</a>
+    </footer>
+  </main>
+  <script src="config.js?v=179"></script>
+  <script src="rules.js?v=179"></script>
+  <script src="discourse-observations.js?v=179"></script>
+  <script src="access.js?v=179"></script>
+  <script src="history.js?v=179"></script>
+  <script src="app.js?v=179"></script>
+  <script src="document-scan.js?v=179"></script>
+  <script src="web-reader.js?v=179"></script>
+  <script src="url-scan.js?v=179"></script>
+  <script src="site-crawl.js?v=179"></script>
+  <script src="report-export.js?v=179"></script>
+  <script src="pwa.js?v=179"></script>
+</body>
+</html>

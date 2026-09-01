@@ -1,0 +1,3 @@
+This GitHub Pages build runs the full detector engine in the visitor's browser. Therefore the HTML, JavaScript, rules, explanations, and client-side access controls are technically downloadable and inspectable. Minification or obfuscation can slow casual copying but cannot make browser-delivered logic secret.
+
+A server-backed deployment is required if rules, access-code verification, payment verification, or licenses must be kept private and enforced securely.
