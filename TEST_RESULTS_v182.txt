@@ -1,0 +1,9 @@
+ANTIZIONISM DETECTOR v182 QA
+Date: 2026-09-01
+
+- JavaScript syntax: checked.
+- Detector rules compile: 355/355.
+- rules.js unchanged from v181.
+- Mobile scan-button CSS: Load page and Crawl site align to flex-start at phone breakpoints.
+- Internal HTML references: checked.
+- Plaintext private access code: absent.

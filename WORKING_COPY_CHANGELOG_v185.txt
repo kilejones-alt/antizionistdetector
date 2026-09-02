@@ -1,0 +1,7 @@
+ANTIZIONISM DETECTOR WORKING COPY v185
+Date: 2026-09-01
+
+UI-only mobile alignment update from v184.
+- Mobile pill outer edges now align with the text/content above them inside each box; prior negative-margin overcorrection removed.
+- Gold Paste Text label remains removed.
+- No detector rules, thresholds, categories, classification logic, access logic, scanning logic, or desktop layout changed.

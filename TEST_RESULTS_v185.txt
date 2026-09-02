@@ -1,0 +1,10 @@
+ANTIZIONISM DETECTOR v185 TEST RESULTS
+Date: 2026-09-01
+
+- JavaScript syntax: PASS
+- Rule regex compilation: PASS (355 rules)
+- rules.js unchanged from v184: PASS
+- Gold Paste Text label absent from consumer UI: PASS
+- Mobile scan/action pill negative-margin overcorrection removed: PASS
+- Internal file references: PASS
+- Private plaintext access code absent: PASS

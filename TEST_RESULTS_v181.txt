@@ -1,0 +1,16 @@
+ANTIZIONISM DETECTOR — WORKING COPY v181
+Date: 2026-09-01
+
+PASS — JavaScript syntax checks for all active .js files.
+PASS — rules.js is byte-for-byte identical to v179.
+PASS — 355 detector rule regular expressions compile successfully.
+PASS — app.js detector/classification logic is unchanged; only the service-worker cache-bust reference changed from v179 to v181.
+PASS — access.js, history.js, discourse-observations.js, and web-reader.js are unchanged from v179.
+PASS — document/url/site scanning logic is preserved; only initial/reset explanatory status copy was removed.
+PASS — requested consumer-facing helper text is absent.
+PASS — Methodology and Support pages and links are absent.
+PASS — internal href/src references resolve.
+PASS — duplicate escapeRegExp definition count remains 1.
+PASS — private four-digit access code is not present in repository source/text files.
+PASS — detector rules, categories, thresholds, and classification criteria were not changed.
+NOTE — local Chromium screenshot rendering is blocked by the execution environment; static layout and reference checks were completed instead.

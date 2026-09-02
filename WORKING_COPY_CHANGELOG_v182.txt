@@ -1,0 +1,8 @@
+ANTIZIONISM DETECTOR WORKING COPY v182
+Date: 2026-09-01
+
+Consumer UI mobile alignment update only.
+- On phone widths, Load page is left-aligned beneath the web-page URL field.
+- On phone widths, Crawl site is left-aligned beneath the site URL/page-limit fields.
+- Desktop scan controls are unchanged.
+- No detector rules, thresholds, categories, labels, stance logic, access logic, or scanning behavior changed.

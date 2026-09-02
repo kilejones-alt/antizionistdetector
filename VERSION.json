@@ -1,7 +1,9 @@
 {
-  "version": "179",
+  "version": "185",
   "date": "2026-09-01",
   "channel": "working-copy",
   "host": "github-pages",
-  "webScanning": "client-side-via-public-web-reader"
+  "webScanning": "client-side-via-public-web-reader",
+  "ui": "consumer-facing-cleanup",
+  "build": "github-pages-working-mobile-pill-inset-alignment"
 }

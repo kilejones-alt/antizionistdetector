@@ -1,4 +1,4 @@
-# The Antizionism Detector — GitHub Pages working build v179
+# The Antizionism Detector — GitHub Pages working build v181
 
 Standalone static GitHub Pages repository.
 
@@ -19,3 +19,7 @@ September 1, 2026 stance clarification: mapped wording counts when the author af
 
 ## v179 GitHub/PWA web scanning
 The obsolete Netlify scan endpoints have been removed. The GitHub Pages/PWA app now retrieves public URLs through a configurable web-reader endpoint (`webReaderBase` in `config.js`, currently Jina Reader) and performs same-site bounded crawling in the browser. Local PDF, DOCX, TXT, JPG, PNG, and WebP analysis remains local. Public URL/site scanning requires internet access and depends on the external reader service and the target site being retrievable. No detector thresholds, categories, or classification rules were changed in v179.
+
+
+## v181 consumer-facing cleanup
+Removed explanatory implementation copy from the main interface, aligned the seven result boxes and correction controls, removed public Methodology and Support pages/links, condensed the Privacy Policy, and normalized the History button. Detector rules and classification thresholds are unchanged.

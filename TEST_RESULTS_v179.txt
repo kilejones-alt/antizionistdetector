@@ -21,7 +21,7 @@ PASSED — GITHUB / PWA WEB SCANNING
 PASSED — STATIC QA
 - All root JavaScript files pass node --check.
 - No duplicate top-level function declarations remain in app.js.
-- Code 2057 is not present in repository source/text files.
+- Private access code is not present in repository source/text files.
 - All local HTML script/style/link references resolve to included files.
 - All service-worker app-shell references resolve.
 - VERSION.json and manifest.webmanifest parse as valid JSON.

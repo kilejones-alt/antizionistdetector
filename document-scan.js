@@ -57,7 +57,7 @@
     fileNameBox.textContent = 'No file selected';
     delete textInput.dataset.documentName;
     delete textInput.dataset.documentType;
-    setStatus('Files are processed in this browser and are not uploaded. OCR requires an internet connection to load its recognition engine.');
+    setStatus('');
     uploadPanel.classList.remove('has-file', 'is-dragging');
   }
 

@@ -1,0 +1,18 @@
+ANTIZIONISM DETECTOR v183 QA
+Date: 2026-09-01
+
+Scope: mobile optical alignment and completion of requested example-section removal.
+
+PASS — JavaScript syntax checks for active first-party JS files.
+PASS — 355 detector rules compile; 0 invalid regex patterns.
+PASS — rules.js SHA-256 unchanged from v182: 88ec3024c2bf4d4e96f0cb76df0487a2b6f2179f5001e7be0a1b9fb2840adcdf.
+PASS — app.js differs from v182 only in the service-worker cache-busting version reference.
+PASS — 0 missing internal HTML href/src references.
+PASS — escapeRegExp defined once.
+PASS — plaintext [private code omitted] absent.
+PASS — 0 active v182 cache references in active HTML/JS/JSON.
+PASS — Small tests/example-button UI removed from index.html.
+PASS — methodology.html and support.html absent; no links to either page.
+PASS — 390px mobile render visually reviewed: tagline optically indented; document, URL, crawl, analysis, purchase, correction, and history action controls align to their local left edge.
+
+No detector rules, thresholds, categories, stance logic, or classification behavior changed in v183.

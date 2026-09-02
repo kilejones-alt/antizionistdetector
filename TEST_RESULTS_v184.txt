@@ -1,0 +1,10 @@
+ANTIZIONISM DETECTOR v184 QA
+
+- rules.js unchanged from v183: PASS.
+- JavaScript syntax: PASS.
+- Rule regex compilation: PASS (355/355).
+- Internal local href/src references: PASS.
+- Mobile visual render at 390 px: PASS.
+- Visible gold “Paste text” label removed; textarea keeps an accessibility label.
+- Mobile pill text is optically aligned to the surrounding text axis.
+- No detector rules, thresholds, categories, stance logic, or classification behavior changed in v184.

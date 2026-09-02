@@ -23,7 +23,7 @@
     delete textInput.dataset.pageUrl;
     delete textInput.dataset.pageTitle;
     panel.classList.remove('has-url');
-    setStatus('Public-page URLs are retrieved through the app’s web reader. Local documents remain on this device.');
+    setStatus('');
   }
 
   async function loadUrl() {

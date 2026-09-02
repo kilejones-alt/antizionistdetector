@@ -40,7 +40,7 @@
     delete textInput.dataset.sitePages;
     panel.classList.remove('has-site');
     clearResults();
-    setStatus('The app follows same-site links found on public pages through its web reader. Some sites may block automated retrieval.');
+    setStatus('');
   }
 
   function renderPages(pages) {

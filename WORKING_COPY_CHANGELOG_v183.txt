@@ -1,0 +1,10 @@
+ANTIZIONISM DETECTOR WORKING COPY v183
+Date: 2026-09-01
+
+UI-only mobile alignment update from v182.
+- Nudged “Paste text. Find out.” slightly right on phone widths.
+- Left-aligned Choose document and Take photo pills.
+- Standardized phone action-pill alignment for document, URL, crawl, analysis, purchase, correction, report, and history controls.
+- Desktop layout unchanged.
+- Detector rules, thresholds, categories, stance logic, and classification behavior unchanged.
+- Removed the remaining Small tests/example-pill section, completing the previously requested example cleanup.

@@ -1,0 +1,6 @@
+ANTIZIONISM DETECTOR WORKING COPY v184
+
+- Mobile only: moved consumer-facing pill buttons 8px farther left for visual alignment.
+- Removed the visible gold “Paste text” label above the textarea; retained an accessible aria-label.
+- Preserved v183 consumer-facing cleanup and all detector behavior.
+- No detector rules, thresholds, categories, stance logic, or classification behavior changed.

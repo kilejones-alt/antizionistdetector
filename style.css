@@ -5217,8 +5217,9 @@ body.paid-access .paid-footer-pill {
 .url-status.is-error { color: #ffd0d0; }
 @media (max-width: 620px) {
   .url-scan-copy { align-items: flex-start; flex-direction: column; gap: 3px; }
-  .url-scan-form { grid-template-columns: 1fr; }
-  .url-load-button { width: 100%; }
+  .url-scan-form { display: flex; flex-direction: column; align-items: flex-start; }
+  .url-scan-input { width: 100%; }
+  .url-load-button { width: auto; align-self: flex-start; }
 }
 
 /* v169 bounded full-domain crawling */
@@ -5315,8 +5316,9 @@ body.paid-access .paid-footer-pill {
 }
 @media (max-width: 720px) {
   .site-crawl-copy { align-items: flex-start; flex-direction: column; gap: 3px; }
-  .site-crawl-form { grid-template-columns: 1fr; }
-  .site-crawl-button { width: 100%; }
+  .site-crawl-form { display: flex; flex-direction: column; align-items: flex-start; }
+  .site-crawl-input, .site-crawl-limit { width: 100%; }
+  .site-crawl-button { width: auto; align-self: flex-start; }
 }
 
 
@@ -5568,4 +5570,231 @@ body.free-limit-reached #analyzeBtn { box-shadow: 0 0 0 1px rgba(255, 106, 106, 
   .purchase-app-button { width: 100%; min-height: 50px; }
   .access-code-link { justify-self: center; min-height: 40px; }
   .access-code-form { padding: 18px; }
+}
+
+
+/* v181 consumer-facing cleanup */
+.document-status:empty,
+.url-status:empty,
+.site-crawl-status:empty { display: none !important; }
+
+.v87-workbench .document-upload-copy,
+.v87-workbench .url-scan-copy,
+.v87-workbench .site-crawl-copy {
+  margin-bottom: 11px !important;
+}
+
+/* Results begin at the same top edge as the input tools. */
+.v87-workbench .result-card {
+  position: relative !important;
+  padding-top: 20px !important;
+}
+.v87-workbench .v87-result-summary {
+  margin-top: 0 !important;
+  align-content: start !important;
+}
+.v87-workbench .summary-box {
+  min-height: 126px !important;
+  height: 126px !important;
+  overflow: auto !important;
+}
+.v87-workbench .matched-summary,
+.v87-workbench .meaning-summary,
+.v87-workbench .why-summary,
+.v87-workbench .who-summary,
+.v87-workbench .source-context-summary,
+.v87-workbench .discourse-pattern-summary {
+  min-height: 126px !important;
+  height: 126px !important;
+  max-height: 126px !important;
+}
+.v87-workbench .resources-summary {
+  grid-column: 1 / -1 !important;
+  min-height: 104px !important;
+  height: auto !important;
+}
+.v87-workbench .summary-box-heading {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  margin-bottom: 5px !important;
+}
+.v87-workbench .summary-box-heading h3 { margin: 0 !important; }
+.v87-workbench .summary-box-heading .badge {
+  flex: 0 0 auto !important;
+  margin: -3px -3px 0 8px !important;
+  padding: 4px 8px !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+}
+
+/* Correction controls align exactly with the result boxes above. */
+.result-correction-panel {
+  margin: 14px 0 0 !important;
+  padding: 16px 0 0 !important;
+  background: transparent !important;
+  border-top: 1px solid rgba(218,228,239,.13) !important;
+  gap: 10px !important;
+}
+.result-correction-panel > div,
+.result-correction-panel > label,
+.result-correction-panel > select,
+.result-correction-panel > textarea,
+.result-correction-panel > .actions {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+.result-correction-panel textarea { min-height: 104px !important; }
+
+/* Local-history call to action is a normal dark outlined control. */
+.local-history-card .history-open-button {
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border: 1px solid rgba(247,241,230,.20) !important;
+  border-radius: 12px !important;
+  background: rgba(0,0,0,.42) !important;
+  color: var(--v87-ink) !important;
+  box-shadow: none !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+}
+.local-history-card .history-open-button:hover,
+.local-history-card .history-open-button:focus-visible {
+  border-color: rgba(216,184,105,.52) !important;
+  background: rgba(216,184,105,.08) !important;
+}
+
+.privacy-compact { max-width: 820px !important; }
+.privacy-compact h2 { margin-top: 24px !important; }
+.quiet-contact {
+  margin: 34px 0 0 !important;
+  color: rgba(247,241,230,.34) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+}
+
+@media (min-width: 860px) {
+  .v87-workbench .quick-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 859px) {
+  .v87-workbench .summary-box,
+  .v87-workbench .matched-summary,
+  .v87-workbench .meaning-summary,
+  .v87-workbench .why-summary,
+  .v87-workbench .who-summary,
+  .v87-workbench .source-context-summary,
+  .v87-workbench .discourse-pattern-summary {
+    height: auto !important;
+    min-height: 112px !important;
+    max-height: none !important;
+  }
+}
+
+/* v184 mobile optical alignment */
+@media (max-width: 620px) {
+  /* Slight optical indent requested for the tagline. */
+  .v87-tagline {
+    margin-left: 10px !important;
+  }
+
+  /* Keep consumer-facing pill controls on the same left axis. */
+  .document-upload-actions {
+    width: calc(100% + 14px) !important;
+    margin-left: -14px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+  .document-choose-button,
+  .url-load-button,
+  .site-crawl-button {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+    margin-right: 0 !important;
+  }
+  .document-choose-button { margin-left: 0 !important; }
+  .url-load-button,
+  .site-crawl-button { margin-left: -14px !important; }
+  .document-file-name {
+    flex: 1 0 100% !important;
+    margin-left: 14px !important;
+  }
+
+  .v87-actions,
+  .result-correction-panel > .actions,
+  .report-export-actions,
+  .purchase-access-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    justify-items: start !important;
+  }
+  .v87-actions,
+  .result-correction-panel > .actions,
+  .report-export-actions {
+    margin-left: -16px !important;
+    width: calc(100% + 16px) !important;
+  }
+  .v87-actions > button,
+  .v87-actions > .action-link,
+  .result-correction-panel > .actions > button,
+  .report-export-actions > button,
+  .purchase-access-actions > button {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+  }
+  .actions .action-link.secondary {
+    flex: 0 0 auto !important;
+  }
+  .purchase-app-button {
+    width: auto !important;
+    min-height: 46px !important;
+    margin-left: -16px !important;
+  }
+  .access-code-link {
+    justify-self: start !important;
+    align-self: center !important;
+  }
+  .local-history-card .history-open-button {
+    width: auto !important;
+    align-self: flex-start !important;
+    margin-left: -18px !important;
+  }
+}
+
+/* v185 mobile pill alignment: align pill outer edges with the text/content above them. */
+@media (max-width: 620px) {
+  .document-upload-actions {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .document-choose-button,
+  .url-load-button,
+  .site-crawl-button,
+  .document-file-name {
+    margin-left: 0 !important;
+  }
+  .v87-actions,
+  .result-correction-panel > .actions,
+  .report-export-actions {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .purchase-app-button,
+  .local-history-card .history-open-button {
+    margin-left: 0 !important;
+  }
 }

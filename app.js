@@ -4575,5 +4575,5 @@ if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
 }
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=179').catch(console.warn));
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js?v=185').catch(console.warn));
 }

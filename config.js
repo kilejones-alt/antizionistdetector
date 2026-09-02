@@ -3,7 +3,7 @@
 window.DETECTOR_CONFIG = Object.freeze({
   webReaderBase: 'https://r.jina.ai/',
   webReaderProvider: 'Jina Reader',
-  productVersion: '179',
+  productVersion: '181',
   buildType: 'github-pages-pwa-web-reader',
   historyStoresFullText: false,
   trialLimit: 3,

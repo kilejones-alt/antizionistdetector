@@ -1,0 +1,12 @@
+Antizionism Detector working build v181 — 2026-09-01
+
+Consumer-facing UI cleanup only.
+- Removed implementation/helper copy from document, URL, website, and correction areas.
+- Removed the visible Result label and moved severity badge into Found in text.
+- Aligned seven result boxes at the top of the result column; standardized box sizing; Resources spans the final row.
+- Aligned correction fields flush with result boxes and changed Save correction locally to Save correction.
+- Normalized Open local history button styling.
+- Removed “Direct, context, and policy examples.” copy.
+- Removed public Methodology and Support pages and their links.
+- Condensed Privacy Policy to required operational disclosures and a quiet contact line.
+- No detector-rule, category, threshold, or classification changes.

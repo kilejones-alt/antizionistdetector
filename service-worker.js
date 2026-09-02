@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'antizionism-detector-v179-working-1';
+const CACHE_VERSION = 'antizionism-detector-v185-mobile-pill-inset-1';
 const APP_SHELL = [
   './',
   './index.html',
@@ -6,14 +6,12 @@ const APP_SHELL = [
   './offline.html',
   './install.html',
   './history.html',
-  './methodology.html',
   './antizionism.html',
   './anti-zionism.html',
   './limits.html',
   './privacy.html',
   './legal.html',
   './resources.html',
-  './support.html',
   './image-credits.html',
   './restore.html',
   './restored.html',

@@ -14,9 +14,9 @@
   <meta property="og:description" content="Paste text. Find out.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="icon-512.png">
-  <link rel="manifest" href="manifest.webmanifest?v=179">
-  <link rel="apple-touch-icon" href="icon-192.png?v=179">
-  <link rel="stylesheet" href="style.css?v=179">
+  <link rel="manifest" href="manifest.webmanifest?v=185">
+  <link rel="apple-touch-icon" href="icon-192.png?v=185">
+  <link rel="stylesheet" href="style.css?v=185">
   <title>The Antizionism Detector | Detector App</title>
 </head>
 <body class="motion-seed v87-body v111-home">
@@ -43,24 +43,22 @@
               <button id="takePhotoBtn" class="secondary document-choose-button" type="button">Take photo</button>
               <span id="documentFileName" class="document-file-name">No file selected</span>
             </div>
-            <p id="documentStatus" class="document-status" aria-live="polite">The file and extracted text stay on this device and are analyzed locally in the browser. OCR requires internet access to load its recognition engine.</p>
+            <p id="documentStatus" class="document-status" aria-live="polite"></p>
           </div>
           <div id="urlScanPanel" class="url-scan-panel" aria-label="Web page scanner">
             <div class="url-scan-copy">
               <span class="url-scan-title">Scan a web page</span>
-              <span class="url-scan-formats">One public URL at a time · public web reader</span>
             </div>
             <form id="urlScanForm" class="url-scan-form">
               <label class="sr-only" for="urlInput">Web-page URL</label>
               <input id="urlInput" class="url-scan-input" type="text" inputmode="url" autocomplete="url" placeholder="https://example.com/article">
               <button id="loadUrlBtn" class="secondary url-load-button" type="submit">Load page</button>
             </form>
-            <p id="urlStatus" class="url-status" aria-live="polite">Public-page URLs are retrieved through the app’s web reader. Local documents remain on this device.</p>
+            <p id="urlStatus" class="url-status" aria-live="polite"></p>
           </div>
           <div id="siteCrawlPanel" class="site-crawl-panel" aria-label="Website crawler">
             <div class="site-crawl-copy">
               <span class="site-crawl-title">Scan a website</span>
-              <span class="site-crawl-formats">Crawl up to 20 same-site pages</span>
             </div>
             <form id="siteCrawlForm" class="site-crawl-form">
               <label class="sr-only" for="siteCrawlInput">Website URL</label>
@@ -73,15 +71,14 @@
               </select>
               <button id="crawlSiteBtn" class="secondary site-crawl-button" type="submit">Crawl site</button>
             </form>
-            <p id="siteCrawlStatus" class="site-crawl-status" aria-live="polite">The app follows same-site links found on public pages through its web reader. Some sites may block automated retrieval.</p>
+            <p id="siteCrawlStatus" class="site-crawl-status" aria-live="polite"></p>
             <div id="siteCrawlResults" class="site-crawl-results" hidden>
               <span class="site-crawl-results-title">Pages included</span>
               <ol id="siteCrawlPages" class="site-crawl-pages"></ol>
             </div>
           </div>
           <div class="document-or-divider"><span>or paste text</span></div>
-          <label for="textInput">Paste text</label>
-          <textarea id="textInput" rows="6" placeholder="Paste a post, paragraph, quote, article excerpt, or slogan..."></textarea>
+          <textarea id="textInput" aria-label="Paste text" rows="6" placeholder="Paste a post, paragraph, quote, article excerpt, or slogan..."></textarea>
           <div class="actions v87-actions">
             <button id="analyzeBtn" class="primary" type="button">Analyze</button>
             <button id="clearBtn" class="secondary" type="button">Clear</button>
@@ -106,14 +103,10 @@
         </div>
 
         <section id="resultCard" class="result-card neutral awaiting" aria-live="polite">
-          <div class="result-topline v87-result-topline">
-            <span class="label">Result</span>
-            <span id="severityBadge" class="badge">Ready</span>
-          </div>
           <span id="resultText" class="sr-only" aria-live="polite"></span>
           <div class="quick-summary v87-result-summary">
             <div class="summary-box matched-summary">
-              <h3>Found in text</h3>
+              <div class="summary-box-heading"><h3>Found in text</h3><span id="severityBadge" class="badge">Ready</span></div>
               <div id="topSummary" class="top-match-summary">—</div>
             </div>
             <div class="summary-box meaning-summary">
@@ -163,7 +156,7 @@
             </div>
           </section>
           <section id="correctionPanel" class="result-correction-panel" aria-label="Correct this language result">
-            <div><h3>Correct this result</h3><p>Corrections stay on this device and do not store the full pasted text.</p></div>
+            <div><h3>Correct this result</h3></div>
             <label for="correctLabel">Correct language label</label>
             <select id="correctLabel">
               <option value="">Choose a label</option>
@@ -176,7 +169,7 @@
             </select>
             <label for="whyWrong">Reason or note</label>
             <textarea id="whyWrong" rows="3" placeholder="Explain what the rule missed or misread."></textarea>
-            <div class="actions"><button id="saveCorrection" class="secondary" type="button">Save correction locally</button><span id="saveStatus" class="save-status" aria-live="polite"></span></div>
+            <div class="actions"><button id="saveCorrection" class="secondary" type="button">Save correction</button><span id="saveStatus" class="save-status" aria-live="polite"></span></div>
           </section>
         </section>
       </div>
@@ -184,39 +177,7 @@
 
     <section class="card local-history-card reveal-item" aria-label="Local history and statistics">
       <div><div class="section-kicker">Private device data</div><h2>History &amp; statistics</h2><p id="historySummary">0 analyses · 0 with mapped language · 0 corrections</p></div>
-      <a class="primary action-link" href="history.html">Open local history</a>
-    </section>
-
-    <section class="card v87-samples v120-samples reveal-item" aria-label="Example texts">
-      <div class="v87-section-head v120-section-head">
-        <div>
-          <div class="section-kicker">Samples</div>
-          <h2>Small tests</h2>
-        </div>
-        <p>Direct, context, and policy examples.</p>
-      </div>
-      <div class="v120-sample-grid" aria-label="Small test examples">
-        <button type="button" class="example-btn" data-example="Free Palestine from the river to the sea">River to sea</button>
-        <button type="button" class="example-btn" data-example="Israel is a settler-colonial apartheid state">Settler-colonial</button>
-        <button type="button" class="example-btn" data-example="Zionism is racism">Zionism is racism</button>
-        <button type="button" class="example-btn" data-example="No Zionists allowed">No Zionists</button>
-        <button type="button" class="example-btn" data-example="The article reported that protesters chanted from the river to the sea">Reported chant</button>
-        <button type="button" class="example-btn" data-example="The post rejected the claim that Zionists control everything">Rejected claim</button>
-        <button type="button" class="example-btn" data-example="I oppose Netanyahu and settlement expansion">Policy criticism</button>
-        <button type="button" class="example-btn" data-example="I support a two-state solution">Two-state</button>
-        <button type="button" class="example-btn term-chip" data-example="Apartheid">Apartheid</button>
-        <button type="button" class="example-btn term-chip" data-example="Genocide">Genocide</button>
-        <button type="button" class="example-btn term-chip" data-example="Ethnostate">Ethnostate</button>
-        <button type="button" class="example-btn term-chip" data-example="Settler-colonialism">Settler-colonialism</button>
-        <button type="button" class="example-btn term-chip" data-example="Hasbara">Hasbara</button>
-        <button type="button" class="example-btn term-chip" data-example="BDS">BDS</button>
-        <button type="button" class="example-btn term-chip" data-example="Open-air prison">Open-air prison</button>
-        <button type="button" class="example-btn term-chip" data-example="Occupier">Occupier</button>
-        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
-        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
-        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
-        <button type="button" class="example-btn future-pill" disabled aria-hidden="true" tabindex="-1"></button>
-      </div>
+      <a class="secondary action-link history-open-button" href="history.html">Open local history</a>
     </section>
 
     <details class="card reference-card v87-guide reveal-item" aria-label="How to read results">
@@ -254,29 +215,27 @@
     <footer class="site-footer v87-footer">
       <span>© 2026 Kile Jones.</span>
       <a class="footer-pill" href="limits.html">Limits &amp; use</a>
-      <a class="footer-pill" href="methodology.html">Methodology</a>
       <a class="footer-pill" href="antizionism.html">What is Antizionism?</a>
       <a class="footer-pill" href="resources.html">Resources</a>
       <a class="footer-pill" href="legal.html">Legal</a>
       <a class="footer-pill" href="privacy.html">Privacy</a>
-      <a class="footer-pill" href="support.html">Support</a>
       <a class="footer-pill" href="install.html">Install</a>
       <a class="footer-pill" href="history.html">History</a>
       <a class="footer-pill" href="index.html">App</a>
       <a id="detectorImageCredit" class="footer-pill image-credit-footer-pill hidden" href="image-credits.html" target="_blank" rel="noopener noreferrer">Image credit</a>
     </footer>
   </main>
-  <script src="config.js?v=179"></script>
-  <script src="rules.js?v=179"></script>
-  <script src="discourse-observations.js?v=179"></script>
-  <script src="access.js?v=179"></script>
-  <script src="history.js?v=179"></script>
-  <script src="app.js?v=179"></script>
-  <script src="document-scan.js?v=179"></script>
-  <script src="web-reader.js?v=179"></script>
-  <script src="url-scan.js?v=179"></script>
-  <script src="site-crawl.js?v=179"></script>
-  <script src="report-export.js?v=179"></script>
-  <script src="pwa.js?v=179"></script>
+  <script src="config.js?v=185"></script>
+  <script src="rules.js?v=185"></script>
+  <script src="discourse-observations.js?v=185"></script>
+  <script src="access.js?v=185"></script>
+  <script src="history.js?v=185"></script>
+  <script src="app.js?v=185"></script>
+  <script src="document-scan.js?v=185"></script>
+  <script src="web-reader.js?v=185"></script>
+  <script src="url-scan.js?v=185"></script>
+  <script src="site-crawl.js?v=185"></script>
+  <script src="report-export.js?v=185"></script>
+  <script src="pwa.js?v=185"></script>
 </body>
 </html>
