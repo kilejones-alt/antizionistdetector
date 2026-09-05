@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'antizionism-detector-v185-mobile-pill-inset-1';
+const CACHE_VERSION = 'antizionism-detector-v186-flat-root-runtime-1';
 const APP_SHELL = [
   './',
   './index.html',
@@ -32,8 +32,8 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
-  './vendor/pdfjs-bundle.min.js',
-  './vendor/mammoth.browser.min.js'
+  './pdfjs-bundle.min.js',
+  './mammoth.browser.min.js'
 ];
 
 self.addEventListener('install', event => {

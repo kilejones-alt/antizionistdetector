@@ -123,7 +123,7 @@
 
 async function ensurePdfReader() {
   if (window.pdfjsLib && typeof window.pdfjsLib.getDocument === 'function') return window.pdfjsLib;
-  if (!pdfLoadPromise) pdfLoadPromise = loadScript('vendor/pdfjs-bundle.min.js?v=6.1.200');
+  if (!pdfLoadPromise) pdfLoadPromise = loadScript('pdfjs-bundle.min.js?v=6.1.200');
   await pdfLoadPromise;
   if (!window.pdfjsLib || typeof window.pdfjsLib.getDocument !== 'function') {
     throw new Error('The PDF reader loaded incorrectly. Reload the page and try again.');
@@ -133,7 +133,7 @@ async function ensurePdfReader() {
 
 async function ensureMammothReader() {
   if (window.mammoth && typeof window.mammoth.extractRawText === 'function') return window.mammoth;
-  if (!mammothLoadPromise) mammothLoadPromise = loadScript('vendor/mammoth.browser.min.js?v=1.12.0');
+  if (!mammothLoadPromise) mammothLoadPromise = loadScript('mammoth.browser.min.js?v=1.12.0');
   await mammothLoadPromise;
   if (!window.mammoth || typeof window.mammoth.extractRawText !== 'function') {
     throw new Error('The DOCX reader loaded incorrectly. Reload the page and try again.');
@@ -197,7 +197,7 @@ async function ensureMammothReader() {
     await ensurePdfReader();
 
     if (window.pdfjsLib.GlobalWorkerOptions) {
-      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'vendor/pdfjs-bundle.min.js';
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs-bundle.min.js';
     }
 
     const data = new Uint8Array(await file.arrayBuffer());

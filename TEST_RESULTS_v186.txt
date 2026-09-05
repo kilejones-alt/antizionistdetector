@@ -1,0 +1,16 @@
+ANTIZIONISM DETECTOR v186 TEST RESULTS
+Date: 2026-09-02
+
+- JavaScript syntax: PASS
+- Rule regex compilation: PASS (355 rules)
+- rules.js unchanged from v185: PASS
+- GitHub-upload runtime path repair: PASS
+- PDF.js and Mammoth runtime files present at repository root: PASS
+- document-scan.js root runtime paths: PASS
+- service-worker app-shell root runtime paths: PASS
+- service-worker app-shell references resolve: PASS
+- Internal HTML references resolve: PASS
+- vendor directory dependency removed: PASS
+- Detector rules, thresholds, categories, and classification logic unchanged.
+
+Browser note: the container browser blocks local test origins by administrator policy, so no live-browser claim is made from this QA pass.

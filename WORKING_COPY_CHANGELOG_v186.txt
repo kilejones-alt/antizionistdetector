@@ -1,0 +1,9 @@
+ANTIZIONISM DETECTOR v186 — GitHub Pages flat-root runtime hotfix
+Date: 2026-09-02
+
+- Fixes GitHub web-upload failure where the vendor directory was not preserved.
+- PDF.js and Mammoth runtime files now live at repository root.
+- document-scan.js loads the root runtime files.
+- service-worker.js caches the root runtime files and uses a new cache version.
+- Active asset query strings bumped to v186 for cache busting.
+- No detector rules, thresholds, categories, or classification logic changed.
